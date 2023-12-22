@@ -20,6 +20,13 @@
 	"categories": [
 		"Other"
 	],
+	"keywords": [
+		"navigate",
+		"jump",
+		"bracket",
+		"parentheses",
+		"vscode"
+	],
 	"main": "./out/extension.js",
 	"bin": {
 		"extension": "./out/extension.js"

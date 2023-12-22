@@ -1,9 +1,8 @@
-import { ExtensionContext, Position, Selection, TextDocument, TextEditor, commands, window } from "vscode"
+import { ExtensionContext, Position, Selection, TextDocument, TextEditor, commands, window, workspace } from "vscode"
 
 type FinderFunc = (currentPosition: Position, lineContent: string, document: TextDocument) => Position
 
 export function activate(context: ExtensionContext): void {
-  const targets = ["(", ")", "{", "}", "[", "]", '"', "'"]
 
   const findBracketForward = ({ line, character }: Position, lineContent: string, document: TextDocument): Position => {
     let lineNumber = line
@@ -70,6 +69,8 @@ export function activate(context: ExtensionContext): void {
     editor.selection = new Selection(bracketPosition, bracketPosition)
     editor.revealRange(document.lineAt(bracketPosition).range)
   }
+
+  const targets = workspace.getConfiguration().get("hop-brackets.symbolsUsed", "(){}[]'\"").split("")
 
   context.subscriptions.push(commands.registerCommand("hop-brackets.forward", () => hop(findBracketForward)))
   context.subscriptions.push(commands.registerCommand("hop-brackets.backwards", () => hop(findBracketBackwards)))

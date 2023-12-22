@@ -32,6 +32,18 @@
 		"extension": "./out/extension.js"
 	},
 	"contributes": {
+		"configuration":[
+			{
+				"title": "HoptoBrackets",
+					"properties": {
+						"hop-brackets.symbolsUsed": {
+							"type": "string",
+							"default": "(){}[]'\"",
+							"description": "Specifies the characters to jump to."
+						}
+					}
+				}
+		],
 		"commands": [
 			{
 				"command": "hop-brackets.forward",

@@ -5,10 +5,9 @@ type FinderFunc = (currentPosition: Position, lineContent: string, document: Tex
 export function activate(context: ExtensionContext): void {
   const targets = ["(", ")", "{", "}", "[", "]", '"', "'"]
 
-  const findBracketForward = (currentPosition: Position, lineContent: string, document: TextDocument): Position => {
-    const { line, character } = currentPosition
-    let lineNumber = currentPosition.line
-    let charNumber = currentPosition.character
+  const findBracketForward = ({ line, character }: Position, lineContent: string, document: TextDocument): Position => {
+    let lineNumber = line
+    let charNumber = character
 
     while (lineNumber < document.lineCount) {
       while (charNumber < lineContent.length) {
@@ -31,10 +30,9 @@ export function activate(context: ExtensionContext): void {
     return new Position(line, character)
   }
 
-  const findBracketBackwards = (currentPosition: Position, lineContent: string, document: TextDocument): Position => {
-    const { line, character } = currentPosition
-    let lineNumber = currentPosition.line
-    let charNumber = currentPosition.character
+  const findBracketBackwards = ({ line, character }: Position, lineContent: string, document: TextDocument): Position => {
+    let lineNumber = line
+    let charNumber = character
 
     while (lineNumber > -1) {
       while (--charNumber >= 0) {

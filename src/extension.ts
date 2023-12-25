@@ -3,7 +3,6 @@ import { ExtensionContext, Position, Selection, TextDocument, TextEditor, comman
 type FinderFunc = (currentPosition: Position, lineContent: string, document: TextDocument) => Position
 
 export function activate(context: ExtensionContext): void {
-
   const findBracketForward = ({ line, character }: Position, lineContent: string, document: TextDocument): Position => {
     let lineNumber = line
     let charNumber = character

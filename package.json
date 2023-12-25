@@ -36,7 +36,7 @@
 			{
 				"title": "HoptoBrackets",
 					"properties": {
-						"hop-brackets.symbolsUsed": {
+						"hop-brackets.charsUsed": {
 							"type": "string",
 							"default": "(){}[]'\"",
 							"description": "Specifies the characters to jump to."

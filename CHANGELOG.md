@@ -6,7 +6,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ### 0.1.0 [2023-12-22]
 
-- New setting `hop-brackets.symbolsUsed` that specifies characters to jump to.
+- New setting `hop-brackets.charsUsed` that specifies characters to jump to.
 
 ### 0.0.1 [2023-12-21]
 

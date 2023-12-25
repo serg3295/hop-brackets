@@ -17,7 +17,7 @@ The extension is highly inspired by [jump-brackets](https://github.com/syovchev/
 
 ## Settings
 
-- `hop-brackets.symbolsUsed` Specifies the characters to jump to. Default value: (){}[]'\"
+- `hop-brackets.charsUsed` Specifies the characters to jump to. Default value: (){}[]'\"
 
 ## Requirements
 

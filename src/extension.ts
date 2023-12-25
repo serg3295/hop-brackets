@@ -70,7 +70,7 @@ export function activate(context: ExtensionContext): void {
     editor.revealRange(document.lineAt(bracketPosition).range)
   }
 
-  const targets = workspace.getConfiguration().get("hop-brackets.symbolsUsed", "(){}[]'\"").split("")
+  const targets = workspace.getConfiguration().get("hop-brackets.charsUsed", "(){}[]'\"").split("")
 
   context.subscriptions.push(commands.registerCommand("hop-brackets.forward", () => hop(findBracketForward)))
   context.subscriptions.push(commands.registerCommand("hop-brackets.backwards", () => hop(findBracketBackwards)))

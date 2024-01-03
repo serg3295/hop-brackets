@@ -1,9 +1,10 @@
 import { ExtensionContext, Position, Selection, TextDocument, TextEditor, commands, window, workspace } from "vscode"
 
-type FinderFunc = (currentPosition: Position, lineContent: string, document: TextDocument) => Position
+type FinderFunc = (currentPosition: Position, document: TextDocument) => Position
 
 export function activate(context: ExtensionContext): void {
-  const findBracketForward = ({ line, character }: Position, lineContent: string, document: TextDocument): Position => {
+  const findBracketForward = ({ line, character }: Position, document: TextDocument): Position => {
+    let lineContent = document.lineAt(line).text
     let lineNumber = line
     let charNumber = character
 
@@ -28,7 +29,8 @@ export function activate(context: ExtensionContext): void {
     return new Position(line, character)
   }
 
-  const findBracketBackwards = ({ line, character }: Position, lineContent: string, document: TextDocument): Position => {
+  const findBracketBackwards = ({ line, character }: Position, document: TextDocument): Position => {
+    let lineContent = document.lineAt(line).text
     let lineNumber = line
     let charNumber = character
 
@@ -62,8 +64,7 @@ export function activate(context: ExtensionContext): void {
 
     const { document } = editor
     const currentPosition = editor.selection.active
-    const lineContent = document.lineAt(currentPosition.line).text ?? ""
-    const bracketPosition = findBracket(currentPosition, lineContent, document)
+    const bracketPosition = findBracket(currentPosition, document)
 
     editor.selection = new Selection(bracketPosition, bracketPosition)
     editor.revealRange(document.lineAt(bracketPosition).range)

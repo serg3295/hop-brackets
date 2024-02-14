@@ -8,6 +8,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Change ci actions to v4
 - Refactor
+- Add Logo
 
 ## 0.1.0 [2023-12-22]
 

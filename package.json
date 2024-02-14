@@ -27,6 +27,7 @@
 		"parentheses",
 		"vscode"
 	],
+	"icon": "images/icon.png",
 	"main": "./out/extension.js",
 	"bin": {
 		"extension": "./out/extension.js"

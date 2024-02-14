@@ -4,7 +4,7 @@ All notable changes to the "hop-brackets" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## 0.1.1 [2024-01-09]
+## 0.1.1 [2024-02-14]
 
 - Change ci actions to v4
 - Refactor

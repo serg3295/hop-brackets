@@ -2,12 +2,6 @@ A Visual Studio code extension that allows you to easily navigate between the **
 
 The built-in VS Code command `editor.action.jumpToBracket` moves the cursor to the closest enclosing bracket when not on a bracket character. This extension adds the feature of moving the cursor to the *nearest* bracket.
 
-The extension is highly inspired by [jump-brackets](https://github.com/syovchev/jump-brackets) extension. Main differences to the *jump-brackets*:
-
-- Heavily refactored
-- Fixed bugs
-- Removed selection feature
-
 ## Commands
 
 - `hop-brackets.forward` Go to next bracket or quotes.
@@ -22,3 +16,11 @@ The extension is highly inspired by [jump-brackets](https://github.com/syovchev/
 ## Requirements
 
 VS Code version >= 1.75.0
+
+## Credit 
+
+The extension is highly inspired by [jump-brackets](https://github.com/syovchev/jump-brackets) extension. Main differences to the *jump-brackets*:
+
+- Heavily refactored
+- Fixed bugs
+- Removed selection feature

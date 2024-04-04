@@ -4,7 +4,7 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "build dev",
+			"label": "Build dev",
 			"type": "npm",
 			"script": "build",
 			"problemMatcher": ["$eslint-stylish"],
@@ -19,7 +19,7 @@
 			},
 		},
 		{
-			"label": "type checking",
+			"label": "Type checking",
 			"type": "shell",
 			"command": [
 				"npx tsc -noEmit"
@@ -31,12 +31,12 @@
 			}
 		},
 		{
-			"label": "Build",
+			"label": "Build with checking",
 			"group": "build",
 			"dependsOrder": "parallel",
 			"dependsOn":[
-				"type checking",
-				"build dev"
+				"Type checking",
+				"Build dev"
 			]
 		}
 	]

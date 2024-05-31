@@ -12,7 +12,7 @@
 	},
 	"plugins": ["sonarjs", "@typescript-eslint"],
 	"extends": [
-		"plugin:sonarjs/recommended",
+		"plugin:sonarjs/recommended-legacy",
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended-type-checked",
 		"plugin:@typescript-eslint/stylistic-type-checked"

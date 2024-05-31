@@ -11,7 +11,7 @@ export function activate(context: ExtensionContext): void {
     while (lineNumber < document.lineCount) {
       while (charNumber < lineContent.length) {
         const currentCharacter = lineContent[charNumber]
-        charNumber += 1
+        charNumber++
 
         if (targets.includes(currentCharacter)) {
           return new Position(lineNumber, charNumber)
@@ -22,7 +22,7 @@ export function activate(context: ExtensionContext): void {
         return new Position(line, character)
       }
 
-      lineNumber += 1
+      lineNumber++
       lineContent = lineNumber <= document.lineCount ? document.lineAt(lineNumber).text : ""
       charNumber = 0
     }
@@ -43,7 +43,7 @@ export function activate(context: ExtensionContext): void {
         }
       }
 
-      lineNumber -= 1
+      lineNumber--
 
       if (lineNumber === -1) {
         return new Position(line, character)
@@ -77,4 +77,4 @@ export function activate(context: ExtensionContext): void {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-export function deactivate(): void {}
+export function deactivate(): void { }
